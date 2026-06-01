@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+    --primary:#ff4655;
+    --dark:#0b0f19;
+    --card:#151c2c;
+    --gray:#cfcfcf;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:url('https://gaming-cdn.com/images/products/6568/616x353/valorant-pc-game-epic-games-cover.jpg?v=1747212191');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.login-container{
+    width:100%;
+    padding:20px;
+}
+
+.login-box{
+
+    max-width:450px;
+
+    margin:auto;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    padding:40px;
+}
+
+.logo{
+
+    text-align:center;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+}
+
+.logo span{
+    display:block;
+    font-size:14px;
+    color:white;
+    letter-spacing:4px;
+}
+
+.login-box h2{
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:30px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    color:white;
+    margin-bottom:8px;
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+}
+
+.password-box{
+    position:relative;
+}
+
+.password-box i{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+}
+
+.login-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.login-btn:hover{
+    opacity:.9;
+}
+
+.register-text{
+
+    text-align:center;
+
+    color:white;
+
+    margin-top:20px;
+}
+
+.register-text a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+}
+
+@media(max-width:500px){
+
+    .login-box{
+        padding:25px;
+    }
+
+}

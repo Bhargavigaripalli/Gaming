@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:url('https://cdn2.unrealengine.com/valorant-feed-1920x1080-189263292.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+}
+
+.register-container{
+    width:100%;
+    padding:20px;
+    position:relative;
+    z-index:2;
+}
+
+.register-card{
+
+    max-width:450px;
+
+    margin:auto;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    padding:40px;
+}
+
+.logo{
+    text-align:center;
+    color:#ff4655;
+    font-size:32px;
+    font-weight:800;
+}
+
+.logo span{
+    display:block;
+    color:white;
+    font-size:14px;
+    letter-spacing:4px;
+}
+
+.register-card h2{
+    text-align:center;
+    color:white;
+    margin:20px 0;
+}
+
+.google-btn{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+.google-btn img{
+    width:22px;
+}
+
+.divider{
+
+    text-align:center;
+
+    color:white;
+
+    margin:20px 0;
+
+    position:relative;
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:40%;
+
+    height:1px;
+
+    background:#555;
+
+    top:50%;
+}
+
+.divider::before{
+    left:0;
+}
+
+.divider::after{
+    right:0;
+}
+
+form input{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:10px;
+}
+
+.register-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ff4655;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+}
+
+.login-link{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:white;
+}
+
+.login-link a{
+    color:#ff4655;
+    text-decoration:none;
+}
+
+@media(max-width:500px){
+
+    .register-card{
+        padding:25px;
+    }
+
+}

@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0b0f19;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.contact-box{
+
+    width:500px;
+
+    background:#151c2c;
+
+    padding:40px;
+
+    border-radius:20px;
+}
+
+.contact-box h1{
+
+    text-align:center;
+
+    color:#ff4655;
+
+    margin-bottom:20px;
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+}
+
+textarea{
+    height:120px;
+    resize:none;
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ff4655;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+@media(max-width:600px){
+
+    .contact-box{
+        width:90%;
+    }
+
+}
