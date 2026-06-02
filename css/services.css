@@ -1,3 +1,7 @@
+ /* =========================
+   GLOBAL
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -8,73 +12,189 @@
 body{
     background:#0b0f19;
     color:white;
+    overflow-x:hidden;
 }
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    padding:20px 8%;
-    background:#111827;
-}
-
-.logo span{
-    color:#ff4655;
-    font-size:28px;
-    font-weight:800;
-}
-
-.nav-links{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
-.nav-links a{
-    color:white;
-    text-decoration:none;
-}
-
-.active{
-    color:#ff4655;
-}
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero{
+    position:relative;
+
+    min-height:50vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
     text-align:center;
-    padding:80px 20px;
+
+    padding:100px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.7),
+            rgba(0,0,0,.7)
+        ),
+        url("https://cdn2.unrealengine.com/valorant-feed-1920x1080-189263292.jpg");
+
+    background-size:cover;
+    background-position:center;
 }
 
 .hero h1{
-    font-size:3rem;
+    font-size:4rem;
     color:#ff4655;
+    margin-bottom:15px;
+    text-shadow:0 0 15px rgba(255,70,85,.5);
 }
 
+.hero p{
+    color:#d1d5db;
+    font-size:1.1rem;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-home{
+    position:absolute;
+    top:30px;
+    left:30px;
+
+    text-decoration:none;
+
+    background:#ff4655;
+    color:#fff;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.back-home:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(255,70,85,.6);
+}
+
+.back-home i{
+    margin-right:8px;
+}
+
+/* =========================
+   SERVICES SECTION
+========================= */
+
 .services{
-    padding:50px 8%;
+    padding:80px 8%;
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
 }
 
 .service-card{
     background:#151c2c;
-    padding:30px;
+
+    padding:35px 25px;
+
     border-radius:20px;
+
     text-align:center;
-    transition:.3s;
+
+    transition:.4s;
+
+    border:1px solid transparent;
 }
 
 .service-card:hover{
     transform:translateY(-10px);
+
+    border-color:#ff4655;
+
+    box-shadow:
+        0 0 25px rgba(255,70,85,.2);
 }
 
 .service-card i{
-    font-size:40px;
+    font-size:45px;
     color:#ff4655;
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
 
+.service-card h3{
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+.service-card p{
+    color:#cfcfcf;
+    line-height:1.7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
-    text-align:center;
-    padding:30px;
     background:#05080f;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:50px;
+}
+
+footer h2{
+    color:#ff4655;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#999;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .back-home{
+        top:20px;
+        left:20px;
+        padding:10px 18px;
+        font-size:14px;
+    }
+
+    .services{
+        padding:60px 5%;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .service-card{
+        padding:25px 20px;
+    }
 }

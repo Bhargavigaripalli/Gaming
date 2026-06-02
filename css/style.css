@@ -45,24 +45,7 @@ header {
     backdrop-filter: blur(12px);
 }
 
-.logo {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
-}
-
-.logo span {
-    color: var(--primary);
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.logo small {
-    color: var(--secondary);
-    font-size: 12px;
-    letter-spacing: 3px;
-}
+ 
 
 .nav-links {
     display: flex;
@@ -113,17 +96,22 @@ header {
 
 .slider {
     position: absolute;
+    top:0;
+    left:0;
     width: 100%;
     height: 100%;
 }
 
 .slide {
     position: absolute;
+      width:100%;
+    height:100%;
     inset: 0;
     opacity: 0;
     transition: 1.5s ease;
     background-size: cover;
     background-position: center;
+     background-repeat:no-repeat;
 }
 
 .slide.active {
@@ -139,7 +127,7 @@ header {
 .hero-content {
     position: relative;
     z-index: 10;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -537,4 +525,205 @@ footer {
 
 .news {
     background: #0f1725;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+ 
+.logo-text span{
+    color:#ff4655;
+    font-size:28px;
+    font-weight:800;
+}
+
+ 
+.about-game{
+    padding:100px 8%;
+    background:#0f1725;
+}
+
+.about-container{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.about-content,
+.about-image{
+    flex:1;
+}
+
+.about-content h2{
+    color:#ff4655;
+    margin-bottom:20px;
+    font-size:2.8rem;
+}
+
+.about-content p{
+    color:#cfcfcf;
+    line-height:1.9;
+    margin-bottom:15px;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+.trending{
+    padding:100px 8%;
+}
+
+.tournament{
+
+    position:relative;
+
+    background:url('https://cdn2.unrealengine.com/valorant-feed-1920x1080-189263292.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    padding:120px 20px;
+
+    text-align:center;
+}
+
+.tournament .overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.75);
+}
+
+.tournament-content{
+    position:relative;
+    z-index:2;
+}
+
+.tournament-content h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.tournament-content p{
+    margin-bottom:30px;
+    color:#ddd;
+}
+#typingText{
+    color:#ff4655;
+    font-size:4.5rem;
+    font-weight:800;
+    text-transform:uppercase;
+    text-shadow:0 0 20px rgba(255,70,85,0.8);
+}
+
+@media(max-width:768px){
+
+    #typingText{
+        font-size:2rem;
+    }
+
+}
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+}
+
+.logo-icon{
+
+    width:55px;
+    height:55px;
+
+    background:linear-gradient(
+        135deg,
+        #ff4655,
+        #ff1f3d
+    );
+
+    border-radius:12px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+        0 0 15px rgba(255,70,85,.4);
+}
+
+.logo-icon i{
+    color:white;
+    font-size:26px;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+ 
+.logo-text h2{
+    color:#ff4655;
+    font-size:32px;
+    font-weight:800;
+    line-height:1;
+    margin:0;
+}
+
+.logo-text span{
+    color:#fff;
+    font-size:12px;
+    letter-spacing:4px;
+    margin-top:4px;
+}
+
+.logo-text small{
+    color:#fff;
+    letter-spacing:4px;
+    font-size:12px;
+    margin-top:3px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .logo-icon{
+        width:45px;
+        height:45px;
+    }
+
+    .logo-icon i{
+        font-size:20px;
+    }
+.logo-text h2{
+    font-size:22px;
+}
+
+.logo-text span{
+    font-size:10px;
+    letter-spacing:3px;
+}
+    
+}
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text h2{
+    margin:0;
+}
+
+.logo{
+    cursor:pointer;
+}
+
+.game-card img{
+    display:block;
 }

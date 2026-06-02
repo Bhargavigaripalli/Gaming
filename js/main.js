@@ -78,6 +78,25 @@ window.addEventListener("scroll", () => {
     }
 });
 
+const text =
+"ENTER THE WORLD OF ULTIMATE GAMING";
+
+let i = 0;
+
+function typeEffect(){
+
+    if(i < text.length){
+
+        document.getElementById("typingText").innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeEffect, 80);
+    }
+
+}
+
+typeEffect();
 
 // ===============================
 // SCROLL REVEAL ANIMATION

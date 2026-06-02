@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Stackly Gaming</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            overflow:hidden;
+            position:relative;
+
+            background:url("https://images2.alphacoders.com/138/thumb-1920-1380678.jpg");
+            background-size:cover;
+            background-position:center;
+        }
+
+        .overlay{
+            position:absolute;
+            inset:0;
+            background:rgba(0,0,0,.75);
+            backdrop-filter:blur(3px);
+        }
+
+        .error-card{
+            position:relative;
+            z-index:2;
+
+            width:90%;
+            max-width:650px;
+
+            background:rgba(15,15,20,.88);
+
+            border:1px solid rgba(255,70,85,.25);
+
+            border-radius:25px;
+
+            padding:50px 40px;
+
+            text-align:center;
+
+            box-shadow:
+                0 0 30px rgba(255,70,85,.2);
+        }
+
+        .icon{
+            width:90px;
+            height:90px;
+            margin:auto;
+            margin-bottom:25px;
+
+            border-radius:50%;
+
+            background:#ff4655;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            box-shadow:
+                0 0 25px rgba(255,70,85,.7);
+        }
+
+        .icon i{
+            color:#fff;
+            font-size:38px;
+        }
+
+        h1{
+            font-size:110px;
+            color:#ff4655;
+            line-height:1;
+            font-weight:800;
+
+            text-shadow:
+                0 0 20px rgba(255,70,85,.7);
+        }
+
+        h2{
+            color:white;
+            margin-top:10px;
+            margin-bottom:15px;
+            font-size:2rem;
+        }
+
+        p{
+            color:#cfcfcf;
+            line-height:1.8;
+            margin-bottom:30px;
+        }
+
+        .status-box{
+            background:#111827;
+            border:1px solid #222;
+            border-radius:15px;
+            padding:20px;
+            text-align:left;
+            margin-bottom:35px;
+        }
+
+        .status{
+            display:flex;
+            justify-content:space-between;
+            margin:10px 0;
+            color:#aaa;
+            font-size:.95rem;
+        }
+
+        .active{
+            color:#00ff9d;
+            font-weight:600;
+        }
+
+        .error{
+            color:#ff4655;
+            font-weight:700;
+        }
+
+        .home-btn{
+            display:inline-block;
+            text-decoration:none;
+
+            background:#ff4655;
+            color:white;
+
+            padding:15px 40px;
+
+            border-radius:40px;
+
+            font-weight:600;
+
+            transition:.4s;
+        }
+
+        .home-btn:hover{
+            transform:translateY(-5px);
+            box-shadow:
+                0 0 20px rgba(255,70,85,.7);
+        }
+
+        @media(max-width:768px){
+
+            h1{
+                font-size:70px;
+            }
+
+            h2{
+                font-size:1.5rem;
+            }
+
+            .error-card{
+                padding:35px 25px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="error-card">
+
+        <div class="icon">
+            <i class="fas fa-gamepad"></i>
+        </div>
+
+        <h1>404</h1>
+
+        <h2>MISSION FAILED</h2>
+
+        <p>
+            The page you're looking for has disappeared from the battlefield.
+            Return to Stackly Gaming and continue your adventure.
+        </p>
+
+        <div class="status-box">
+
+            <div class="status">
+                <span>GAME SERVER :</span>
+                <span class="active">ONLINE</span>
+            </div>
+
+            <div class="status">
+                <span>PLAYER STATUS :</span>
+                <span class="active">CONNECTED</span>
+            </div>
+
+            <div class="status">
+                <span>MISSION :</span>
+                <span class="error">ERR_404_NOT_FOUND</span>
+            </div>
+
+        </div>
+
+        <a href="index.html" class="home-btn">
+            Back To Home
+        </a>
+
+    </div>
+
+</body>
+
+</html>

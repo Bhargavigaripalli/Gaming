@@ -1,4 +1,4 @@
-*{
+ *{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -9,55 +9,49 @@
     --primary:#ff4655;
     --dark:#0b0f19;
     --card:#151c2c;
-    --white:#fff;
+    --white:#ffffff;
     --gray:#cfcfcf;
 }
 
 body{
     background:var(--dark);
-    color:white;
+    color:var(--white);
+    overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* =========================
+   BACK BUTTON
+========================= */
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
+.back-btn-container{
+    padding:25px 8%;
+}
+
+.homebutton{
+    display:inline-flex;
     align-items:center;
-    padding:20px 8%;
-    background:#111827;
-}
-
-.logo span{
-    color:var(--primary);
-    font-size:28px;
-    font-weight:800;
-}
-
-.logo small{
-    display:block;
+    gap:8px;
+    padding:12px 22px;
+    background:var(--primary);
     color:white;
-    letter-spacing:2px;
-}
-
-.nav-links{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
-.nav-links a{
     text-decoration:none;
-    color:white;
+    border-radius:40px;
+    font-weight:600;
     transition:.3s;
 }
 
-.nav-links a:hover,
-.active{
-    color:var(--primary);
+.homebutton:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 15px rgba(255,70,85,.5);
 }
 
-/* HERO */
+.homebutton i{
+    font-size:15px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
 
 .about-hero{
     height:60vh;
@@ -70,7 +64,7 @@ body{
 .overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.65);
+    background:rgba(0,0,0,.70);
 }
 
 .hero-content{
@@ -82,32 +76,51 @@ body{
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:0 20px;
 }
 
 .hero-content h1{
-    font-size:3rem;
+    font-size:3.5rem;
+    color:white;
+    margin-bottom:15px;
 }
 
 .hero-content p{
     color:var(--gray);
+    font-size:1.1rem;
 }
 
-/* SECTIONS */
+/* =========================
+   COMMON
+========================= */
 
 .container{
     max-width:1200px;
     margin:auto;
 }
 
-.about-section,
-.team{
+section{
     padding:90px 8%;
 }
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    color:var(--primary);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
 
 .about-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
+    gap:60px;
     align-items:center;
 }
 
@@ -117,20 +130,23 @@ body{
 }
 
 .about-content h2{
-    margin-bottom:20px;
     color:var(--primary);
+    margin-bottom:20px;
+    font-size:2rem;
 }
 
 .about-content p{
     color:var(--gray);
-    margin-bottom:15px;
     line-height:1.8;
+    margin-bottom:15px;
 }
 
-/* MISSION */
+/* =========================
+   MISSION SECTION
+========================= */
 
 .mission{
-    padding:90px 8%;
+    background:#101827;
 }
 
 .mission .container{
@@ -144,18 +160,33 @@ body{
     padding:35px;
     border-radius:20px;
     text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
 }
 
 .card i{
     color:var(--primary);
-    font-size:40px;
+    font-size:45px;
     margin-bottom:20px;
 }
 
-/* STATS */
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:var(--gray);
+    line-height:1.7;
+}
+
+/* =========================
+   STATS
+========================= */
 
 .stats{
-    padding:80px 8%;
     background:#111827;
 }
 
@@ -167,26 +198,28 @@ body{
 
 .stat-box{
     background:var(--card);
-    text-align:center;
     padding:35px;
     border-radius:20px;
+    text-align:center;
 }
 
 .stat-box h2{
+    font-size:2.8rem;
     color:var(--primary);
-    font-size:2.5rem;
+    margin-bottom:10px;
 }
 
-/* TEAM */
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
+.stat-box p{
+    color:var(--gray);
 }
+
+/* =========================
+   TEAM SECTION
+========================= */
 
 .team-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
@@ -195,6 +228,11 @@ body{
     padding:35px;
     border-radius:20px;
     text-align:center;
+    transition:.3s;
+}
+
+.team-card:hover{
+    transform:translateY(-8px);
 }
 
 .team-card i{
@@ -203,12 +241,22 @@ body{
     margin-bottom:15px;
 }
 
-/* FOOTER */
+.team-card h3{
+    margin-bottom:8px;
+}
+
+.team-card p{
+    color:var(--gray);
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#05080f;
     text-align:center;
-    padding:40px;
+    padding:50px 20px;
 }
 
 footer h2{
@@ -227,36 +275,68 @@ footer h2{
     justify-content:center;
     align-items:center;
     border-radius:50%;
-    background:#151c2c;
+    background:var(--card);
     color:white;
-    margin:0 6px;
     text-decoration:none;
+    margin:0 6px;
     transition:.3s;
 }
 
 .social-icons a:hover{
     background:var(--primary);
+    transform:translateY(-5px);
 }
 
-/* RESPONSIVE */
+footer p{
+    color:var(--gray);
+}
 
-@media(max-width:768px){
+/* =========================
+   RESPONSIVE
+========================= */
 
-    .navbar{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .nav-links{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
+@media(max-width:991px){
 
     .about-grid{
         grid-template-columns:1fr;
     }
 
     .hero-content h1{
+        font-size:2.8rem;
+    }
+}
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:2.2rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .section-title h2{
         font-size:2rem;
+    }
+
+    section{
+        padding:70px 5%;
+    }
+
+    .back-btn-container{
+        padding:20px 5%;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero-content h1{
+        font-size:1.8rem;
+    }
+
+    .homebutton{
+        padding:10px 18px;
+        font-size:14px;
     }
 }
