@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Create Account | Stackly Gaming</title>
 
     <link rel="stylesheet" href="css/register.css">
@@ -13,9 +15,17 @@
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
+
+    <!-- BACK BUTTON -->
+
+    <a href="index.html" class="back-home">
+        <i class="fas fa-arrow-left"></i>
+        Back To Home
+    </a>
 
     <div class="overlay"></div>
 
@@ -30,9 +40,15 @@
 
             <h2>Create Your Account</h2>
 
-            <button class="google-btn" id="googleBtn">
+            <!-- GOOGLE BUTTON -->
 
-                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+            <button
+                type="button"
+                class="google-btn"
+                id="googleBtn">
+
+                <img
+                    src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
                     alt="Google">
 
                 Continue with Google
@@ -43,12 +59,16 @@
                 <span>OR</span>
             </div>
 
+            <!-- REGISTER FORM -->
+
             <form id="registerForm">
 
                 <input
                     type="text"
                     id="fullname"
                     placeholder="Full Name"
+                    pattern="[A-Za-z ]+"
+                    title="Only alphabets and spaces allowed"
                     required>
 
                 <input
@@ -63,18 +83,24 @@
                     placeholder="Password"
                     required>
 
-                <button type="submit" class="register-btn">
+                <button
+                    type="submit"
+                    class="register-btn">
+
                     Create Account
+
                 </button>
 
             </form>
 
             <p class="login-link">
+
                 Already have an account?
 
                 <a href="login.html">
                     Login
                 </a>
+
             </p>
 
         </div>

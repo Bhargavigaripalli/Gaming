@@ -1,3 +1,7 @@
+ /* =========================
+   GLOBAL
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -9,57 +13,109 @@
     --primary:#ff4655;
     --dark:#0b0f19;
     --card:#151c2c;
-    --white:#fff;
+    --white:#ffffff;
     --gray:#cfcfcf;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
     background:var(--dark);
-    color:white;
+    color:var(--white);
+    overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
+
+header{
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
 .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
+    padding:15px 8%;
     background:#111827;
 }
 
-.logo span{
-    color:var(--primary);
-    font-size:28px;
-    font-weight:800;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.logo small{
-    display:block;
+.logo-icon{
+    width:50px;
+    height:50px;
+    background:var(--primary);
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo-icon i{
+    color:white;
+    font-size:22px;
+}
+
+.logo-text h2{
+    color:white;
+    font-size:22px;
+}
+
+.logo-text span{
+    color:var(--primary);
+    font-size:14px;
     letter-spacing:2px;
+    font-weight:700;
 }
 
 .nav-links{
     display:flex;
-    list-style:none;
+    align-items:center;
     gap:25px;
+    list-style:none;
 }
 
 .nav-links a{
     text-decoration:none;
     color:white;
+    transition:.3s;
 }
 
 .nav-links a:hover,
-.active{
+.nav-links .active{
     color:var(--primary);
 }
 
-/* HERO */
+.btn-nav{
+    background:var(--primary);
+    padding:10px 20px;
+    border-radius:30px;
+}
+
+.menu-btn{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .games-hero{
-    height:50vh;
-    background:url('https://xboxwire.thesourcemediaassets.com/sites/2/2024/08/Val-Console-Launch-Hero-1080-__-GAME-STORES-80b474d3ff38615edd0a.jpg');
+    height:60vh;
+    background:url("https://cdn2.unrealengine.com/valorant-feed-1920x1080-189263292.jpg");
     background-size:cover;
     background-position:center;
     position:relative;
@@ -68,7 +124,7 @@ body{
 .overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.7);
+    background:rgba(0,0,0,.70);
 }
 
 .hero-content{
@@ -79,18 +135,23 @@ body{
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    text-align:center;
+    padding:0 20px;
 }
 
 .hero-content h1{
-    font-size:3rem;
-    text-align:center;
+    font-size:3.5rem;
+    margin-bottom:15px;
 }
 
 .hero-content p{
     color:var(--gray);
+    font-size:1.1rem;
 }
 
-/* SEARCH */
+/* =========================
+   SEARCH
+========================= */
 
 .search-section{
     padding:40px 8%;
@@ -100,34 +161,44 @@ body{
 .search-section input{
     width:100%;
     max-width:600px;
-    padding:15px;
+    padding:15px 20px;
     border:none;
-    border-radius:10px;
     outline:none;
+    border-radius:50px;
+    background:var(--card);
+    color:white;
+    font-size:16px;
 }
 
-/* FILTERS */
+/* =========================
+   FILTERS
+========================= */
 
 .filters{
-    text-align:center;
-    padding-bottom:40px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    padding:0 8% 40px;
 }
 
 .filters button{
-    padding:10px 20px;
-    margin:5px;
+    padding:12px 25px;
     border:none;
-    border-radius:25px;
+    border-radius:30px;
     background:var(--card);
     color:white;
     cursor:pointer;
+    transition:.3s;
 }
 
 .filters button:hover{
     background:var(--primary);
 }
 
-/* GAMES */
+/* =========================
+   GAMES GRID
+========================= */
 
 .games-container{
     padding:20px 8% 80px;
@@ -135,7 +206,8 @@ body{
 
 .game-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
 }
 
@@ -147,7 +219,8 @@ body{
 }
 
 .game-card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(255,70,85,.25);
 }
 
 .game-card img{
@@ -157,7 +230,7 @@ body{
 }
 
 .game-info{
-    padding:20px;
+    padding:25px;
 }
 
 .game-info h3{
@@ -166,11 +239,13 @@ body{
 
 .game-info p{
     color:var(--gray);
+    margin-bottom:15px;
 }
 
 .rating{
-    margin:15px 0;
-    color:gold;
+    color:#ffd700;
+    margin-bottom:20px;
+    font-size:18px;
 }
 
 .buttons{
@@ -181,11 +256,12 @@ body{
 .play-btn,
 .download-btn{
     flex:1;
-    padding:10px;
     border:none;
-    border-radius:10px;
+    padding:12px;
+    border-radius:30px;
     cursor:pointer;
     font-weight:600;
+    transition:.3s;
 }
 
 .play-btn{
@@ -194,38 +270,87 @@ body{
 }
 
 .download-btn{
-    background:#2d3748;
+    background:#222;
     color:white;
 }
 
-/* FOOTER */
-
-footer{
-    background:#05080f;
-    text-align:center;
-    padding:40px;
+.play-btn:hover,
+.download-btn:hover{
+    opacity:.9;
 }
 
-footer h2{
-    color:var(--primary);
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#05080f;
+    padding:70px 8% 30px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.footer-col{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
     margin-bottom:20px;
 }
 
+.footer-logo-text h2{
+    color:white;
+}
+
+.footer-logo-text span{
+    color:var(--primary);
+}
+
+.footer-col h3{
+    margin-bottom:20px;
+}
+
+.footer-col p{
+    color:var(--gray);
+    line-height:1.8;
+}
+
+.footer-col a{
+    text-decoration:none;
+    color:var(--gray);
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.footer-col a:hover{
+    color:var(--primary);
+}
+
 .social-icons{
-    margin:20px 0;
+    display:flex;
+    gap:10px;
+    margin-top:20px;
 }
 
 .social-icons a{
     width:45px;
     height:45px;
-    display:inline-flex;
+    border-radius:50%;
+    background:var(--card);
+    display:flex;
     justify-content:center;
     align-items:center;
-    border-radius:50%;
-    background:#151c2c;
     color:white;
-    margin:0 6px;
-    text-decoration:none;
     transition:.3s;
 }
 
@@ -233,29 +358,121 @@ footer h2{
     background:var(--primary);
 }
 
-footer p{
-    color:var(--gray);
+.newsletter{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:15px;
 }
 
-/* RESPONSIVE */
+.newsletter input{
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:30px;
+    background:var(--card);
+    color:white;
+}
+
+.newsletter button{
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:var(--primary);
+    color:white;
+    cursor:pointer;
+}
+
+.footer hr{
+    border:none;
+    height:1px;
+    background:#222;
+    margin:40px 0 20px;
+}
+
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.footer-bottom p{
+    color:#999;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
 
 @media(max-width:768px){
 
-    .navbar{
-        flex-direction:column;
-        gap:15px;
+    .menu-btn{
+        display:block;
     }
 
     .nav-links{
-        flex-wrap:wrap;
-        justify-content:center;
+        position:absolute;
+        top:80px;
+        left:-100%;
+        width:100%;
+        background:#111827;
+        flex-direction:column;
+        text-align:center;
+        padding:25px 0;
+        transition:.4s;
+    }
+
+    .nav-links.active{
+        left:0;
     }
 
     .hero-content h1{
-        font-size:2rem;
+        font-size:2.2rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .footer-logo{
+        justify-content:center;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+/* =========================
+   MOBILE SMALL
+========================= */
+
+@media(max-width:480px){
+
+    .games-hero{
+        height:50vh;
+    }
+
+    .hero-content h1{
+        font-size:1.8rem;
     }
 
     .buttons{
         flex-direction:column;
+    }
+
+    .game-card img{
+        height:180px;
     }
 }

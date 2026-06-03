@@ -727,3 +727,178 @@ footer {
 .game-card img{
     display:block;
 }
+/* =========================
+   MODERN FOOTER
+========================= */
+
+.footer{
+    background:linear-gradient(
+        135deg,
+        #05080f,
+        #08122c
+    );
+    padding:70px 8% 30px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+    gap:50px;
+}
+
+.footer-col h3{
+    margin-bottom:20px;
+    color:white;
+    font-size:22px;
+}
+
+.footer-col p{
+    color:#bcbcbc;
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+.footer-col a{
+    display:block;
+    color:#bcbcbc;
+    text-decoration:none;
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.footer-col a:hover{
+    color:#ff4655;
+}
+
+/* Logo */
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+    text-decoration:none;
+}
+
+.footer-logo-text h2{
+    color:white;
+    margin:0;
+}
+
+.footer-logo-text span{
+    color:#ff4655;
+    font-size:18px;
+    font-weight:700;
+}
+
+.footer .logo-icon{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#ff4655;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.footer .logo-icon i{
+    color:white;
+    font-size:24px;
+}
+
+/* Social Icons */
+
+.footer .social-icons{
+    margin-top:20px;
+}
+
+.footer .social-icons a{
+    width:45px;
+    height:45px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background:#151c2c;
+    border-radius:50%;
+    margin-right:8px;
+    color:white;
+}
+
+.footer .social-icons a:hover{
+    background:#ff4655;
+    transform:translateY(-4px);
+}
+
+/* Newsletter */
+
+.newsletter{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.newsletter input{
+    flex:1;
+    min-width:180px;
+    padding:12px 15px;
+    border:none;
+    border-radius:30px;
+    outline:none;
+    background:#151c2c;
+    color:white;
+}
+
+.newsletter button{
+    border:none;
+    padding:12px 22px;
+    border-radius:30px;
+    background:#ff4655;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.newsletter button:hover{
+    background:#ff2e42;
+}
+
+/* Footer Bottom */
+
+.footer hr{
+    border:none;
+    height:1px;
+    background:#222;
+    margin:40px 0 20px;
+}
+
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.footer-bottom p{
+    color:#999;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .newsletter{
+        flex-direction:column;
+    }
+
+    .newsletter button{
+        width:100%;
+    }
+}

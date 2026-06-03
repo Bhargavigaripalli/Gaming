@@ -1,4 +1,4 @@
-// Search Functionality
+ // Search Functionality
 
 const searchInput = document.getElementById("searchInput");
 
@@ -8,19 +8,46 @@ if (searchInput) {
 
         const searchValue = this.value.toLowerCase();
 
-        const gameCards = document.querySelectorAll(".game-card");
+        const gameCards =
+            document.querySelectorAll(".game-card");
 
         gameCards.forEach(card => {
 
-            const title = card.querySelector("h3").textContent.toLowerCase();
+            const title =
+                card.querySelector("h3")
+                .textContent
+                .toLowerCase();
 
-            if (title.includes(searchValue)) {
+            if(title.includes(searchValue)){
+
                 card.style.display = "block";
-            } else {
+
+            }else{
+
                 card.style.display = "none";
+
             }
 
         });
+
+    });
+
+}
+
+
+// Mobile Menu
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+if(menuBtn){
+
+    menuBtn.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
 
     });
 

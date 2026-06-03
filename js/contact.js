@@ -1,4 +1,4 @@
-const form =
+ const form =
 document.getElementById("contactForm");
 
 form.addEventListener("submit", (e) => {
@@ -6,16 +6,42 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const name =
-    document.getElementById("name").value.trim();
+    document.getElementById("name")
+    .value.trim();
 
     const email =
-    document.getElementById("email").value.trim();
+    document.getElementById("email")
+    .value.trim();
 
     const subject =
-    document.getElementById("subject").value.trim();
+    document.getElementById("subject")
+    .value.trim();
 
     const message =
-    document.getElementById("message").value.trim();
+    document.getElementById("message")
+    .value.trim();
+
+    const nameRegex =
+    /^[A-Za-z ]+$/;
+
+    const emailRegex =
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!nameRegex.test(name)){
+
+        alert(
+        "Name should contain only alphabets");
+
+        return;
+    }
+
+    if(!emailRegex.test(email)){
+
+        alert(
+        "Please enter a valid email address");
+
+        return;
+    }
 
     if(
         name === "" ||
@@ -29,8 +55,22 @@ form.addEventListener("submit", (e) => {
         return;
     }
 
-    alert("Message Sent Successfully!");
+    window.location.href =
+    "404.html";
 
-    form.reset();
+});
+
+
+// Mobile Menu
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
 
 });

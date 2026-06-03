@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,19 +16,88 @@
 </head>
 
 <body>
-    <section class="hero">
 
-    <a href="index.html" class="back-home">
-        <i class="fas fa-arrow-left"></i> Back To Home
-    </a>
+<!-- NAVBAR -->
 
-    <h1>OUR SERVICES</h1>
+<header>
 
-    <p>Everything a gamer needs in one place.</p>
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fas fa-gamepad"></i>
+            </div>
+
+            <div class="logo-text">
+                <h2>STACKLY</h2>
+                <span>GAMING</span>
+            </div>
+
+        </div>
+
+        <div class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About Us</a></li>
+
+            <li>
+                <a href="services.html" class="active">
+                    Services
+                </a>
+            </li>
+
+            <li><a href="games.html">Games</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+            <li><a href="login.html">Login</a></li>
+
+            <li>
+                <a href="register.html" class="btn-nav">
+                    Get Started
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="services-hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>OUR SERVICES</h1>
+
+        <p>
+            Everything a gamer needs in one place.
+            Explore tournaments, reviews, streaming and more.
+        </p>
+
+    </div>
 
 </section>
 
-    <section class="services">
+<!-- SERVICES -->
+
+<section class="services">
+
+    <div class="section-title">
+        <h2>Gaming Services</h2>
+    </div>
+
+    <div class="services-grid">
 
         <div class="service-card">
             <i class="fas fa-gamepad"></i>
@@ -66,13 +135,140 @@
             <p>24/7 support for all gaming-related issues.</p>
         </div>
 
-    </section>
+    </div>
 
-    <footer>
-        <h2>STACKLY GAMING</h2>
-        <p>© 2026 All Rights Reserved.</p>
-    </footer>
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-col">
+
+            <a href="index.html" class="footer-logo">
+
+                <div class="logo-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+
+                <div class="footer-logo-text">
+                    <h2>Stackly</h2>
+                    <span>Gaming</span>
+                </div>
+
+            </a>
+
+            <p>
+                Stackly Gaming is your ultimate destination
+                for gaming news, esports tournaments,
+                reviews and live streaming.
+            </p>
+
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+
+            <p><i class="fas fa-envelope"></i> stacklygaming@gmail.com</p>
+
+            <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+
+            <div class="social-icons">
+
+                <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="404.html"><i class="fab fa-instagram"></i></a>
+
+                <a href="404.html"><i class="fab fa-x-twitter"></i></a>
+
+                <a href="404.html"><i class="fab fa-youtube"></i></a>
+
+                <a href="404.html"><i class="fab fa-discord"></i></a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="games.html">Games</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h3>Gaming Services</h3>
+
+            <a href="404.html">Game Reviews</a>
+            <a href="404.html">Esports Events</a>
+            <a href="404.html">Live Streaming</a>
+            <a href="404.html">Gaming News</a>
+            <a href="404.html">Community Forum</a>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h3>Newsletter</h3>
+
+            <p>
+                Subscribe for gaming updates,
+                esports news and tournaments.
+            </p>
+
+            <form class="newsletter"
+                  action="404.html"
+                  method="get">
+
+                <input
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                    oninvalid="this.setCustomValidity('Please enter your email address')"
+                    oninput="this.setCustomValidity('')">
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Stackly Gaming.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Designed By Stackly Team
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+</script>
 
 </body>
-
 </html>

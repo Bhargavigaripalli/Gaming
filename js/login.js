@@ -1,4 +1,4 @@
-// SHOW/HIDE PASSWORD
+ // SHOW / HIDE PASSWORD
 
 const togglePassword =
 document.getElementById("togglePassword");
@@ -10,8 +10,8 @@ togglePassword.addEventListener("click", () => {
 
     const type =
         password.getAttribute("type") === "password"
-            ? "text"
-            : "password";
+        ? "text"
+        : "password";
 
     password.setAttribute("type", type);
 
@@ -21,7 +21,7 @@ togglePassword.addEventListener("click", () => {
 });
 
 
-// LOGIN VALIDATION
+// LOGIN
 
 const loginForm =
 document.getElementById("loginForm");
@@ -31,24 +31,20 @@ loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const email =
-        document.getElementById("email").value;
+    document.getElementById("email").value.trim();
 
     const passwordValue =
-        document.getElementById("password").value;
+    document.getElementById("password").value.trim();
 
-    if (
-        email === "admin@stackly.com" &&
-        passwordValue === "123456"
-    ) {
+    if(email === "" || passwordValue === ""){
 
-        alert("Login Successful!");
-
-        window.location.href = "index.html";
-
-    } else {
-
-        alert("Invalid Email or Password");
+        alert("Please fill all fields");
+        return;
 
     }
+
+    // Redirect to 404 page
+
+    window.location.href = "404.html";
 
 });
