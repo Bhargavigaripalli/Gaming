@@ -21,18 +21,18 @@
 
     <nav class="navbar">
 
-        <div class="logo">
+        <a href="index.html" class="logo">
 
-            <div class="logo-icon">
-                <i class="fas fa-gamepad"></i>
-            </div>
+    <div class="logo-icon">
+        <i class="fas fa-gamepad"></i>
+    </div>
 
-            <div class="logo-text">
-                <h2>STACKLY</h2>
-                <span>GAMING</span>
-            </div>
+    <div class="logo-text">
+        <h2>STACKLY</h2>
+        <span>GAMING</span>
+    </div>
 
-        </div>
+</a>
 
         <ul class="nav-links" id="navLinks">
 
@@ -71,12 +71,14 @@
         <h1>Contact Us</h1>
 
         <form id="contactForm">
-
             <input
-                type="text"
-                id="name"
-                placeholder="Enter Your Name"
-                required>
+                    type="text"
+                    id="fullname"
+                    placeholder="Full Name"
+                       maxlength="16"
+                    pattern="[A-Za-z ]+"
+                    title="Only alphabets and spaces allowed"
+                    required>
 
             <input
                 type="email"

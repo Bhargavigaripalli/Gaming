@@ -18,10 +18,26 @@ registerForm.addEventListener("submit", (e) => {
 
     const nameRegex = /^[A-Za-z ]+$/;
 
+    if (fullname === "") {
+
+        alert("Please enter your full name");
+
+        return;
+    }
+
     if (!nameRegex.test(fullname)) {
 
         alert(
             "Name should contain only alphabets and spaces."
+        );
+
+        return;
+    }
+
+    if (fullname.length > 16) {
+
+        alert(
+            "Name should not exceed 16 characters."
         );
 
         return;
@@ -41,7 +57,7 @@ registerForm.addEventListener("submit", (e) => {
         return;
     }
 
-    // STRONG PASSWORD VALIDATION
+    // PASSWORD VALIDATION
 
     const passwordRegex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;

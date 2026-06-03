@@ -902,3 +902,22 @@ footer {
         width:100%;
     }
 }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.logo h2{
+    color:white;
+}
+
+.logo span{
+    color:#ff4655;
+}
+
+.logo:hover{
+    opacity:.9;
+}

@@ -476,3 +476,18 @@ header{
         height:180px;
     }
 }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.logo h2{
+    color:white;
+}
+
+.logo span{
+    color:#ff4655;
+}

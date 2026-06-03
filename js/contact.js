@@ -1,76 +1,111 @@
- const form =
-document.getElementById("contactForm");
+ // CONTACT FORM VALIDATION
+
+const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", (e) => {
 
     e.preventDefault();
 
     const name =
-    document.getElementById("name")
-    .value.trim();
+        document.getElementById("name")
+        .value.trim();
 
     const email =
-    document.getElementById("email")
-    .value.trim();
+        document.getElementById("email")
+        .value.trim();
 
     const subject =
-    document.getElementById("subject")
-    .value.trim();
+        document.getElementById("subject")
+        .value.trim();
 
     const message =
-    document.getElementById("message")
-    .value.trim();
+        document.getElementById("message")
+        .value.trim();
 
-    const nameRegex =
-    /^[A-Za-z ]+$/;
+    // Name Validation
+    const nameRegex = /^[A-Za-z ]+$/;
 
+    if (name === "") {
+
+        alert("Please enter your name");
+
+        return;
+    }
+
+    if (!nameRegex.test(name)) {
+
+        alert(
+            "Name should contain only alphabets and spaces"
+        );
+
+        return;
+    }
+
+    if (name.length > 16) {
+
+        alert(
+            "Name should not exceed 16 characters"
+        );
+
+        return;
+    }
+
+    // Email Validation
     const emailRegex =
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if(!nameRegex.test(name)){
+    if (email === "") {
+
+        alert("Please enter your email");
+
+        return;
+    }
+
+    if (!emailRegex.test(email)) {
 
         alert(
-        "Name should contain only alphabets");
+            "Please enter a valid email address"
+        );
 
         return;
     }
 
-    if(!emailRegex.test(email)){
+    // Subject Validation
+    if (subject === "") {
 
-        alert(
-        "Please enter a valid email address");
-
-        return;
-    }
-
-    if(
-        name === "" ||
-        email === "" ||
-        subject === "" ||
-        message === ""
-    ){
-
-        alert("Please fill all fields");
+        alert("Please enter subject");
 
         return;
     }
 
-    window.location.href =
-    "404.html";
+    // Message Validation
+    if (message === "") {
+
+        alert("Please enter your message");
+
+        return;
+    }
+
+    // Success Redirect
+    window.location.href = "404.html";
 
 });
 
 
-// Mobile Menu
+// MOBILE MENU TOGGLE
 
 const menuBtn =
-document.getElementById("menuBtn");
+    document.getElementById("menuBtn");
 
 const navLinks =
-document.getElementById("navLinks");
+    document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
+if (menuBtn && navLinks) {
 
-    navLinks.classList.toggle("active");
+    menuBtn.addEventListener("click", () => {
 
-});
+        navLinks.classList.toggle("active");
+
+    });
+
+}
