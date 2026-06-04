@@ -10,20 +10,16 @@
 }
 
 body{
-
     min-height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
 
     background:url('https://cdn2.unrealengine.com/valorant-feed-1920x1080-189263292.jpg');
-
     background-size:cover;
     background-position:center;
 
     position:relative;
-
     overflow-x:hidden;
 }
 
@@ -32,33 +28,27 @@ body{
 ========================= */
 
 .overlay{
-
     position:absolute;
     inset:0;
-
     background:rgba(0,0,0,.70);
-
     z-index:1;
 }
 
 /* =========================
-   BACK BUTTON
+   BACK TO HOME BUTTON
 ========================= */
 
 .back-home{
-
     position:fixed;
-
     top:20px;
     left:20px;
 
     background:#ff4655;
-    color:white;
+    color:#fff;
 
     text-decoration:none;
 
     padding:12px 20px;
-
     border-radius:30px;
 
     font-weight:600;
@@ -69,9 +59,7 @@ body{
 }
 
 .back-home:hover{
-
     transform:translateY(-3px);
-
     box-shadow:0 0 15px rgba(255,70,85,.5);
 }
 
@@ -84,13 +72,9 @@ body{
 ========================= */
 
 .register-container{
-
     width:100%;
-
     padding:20px;
-
     position:relative;
-
     z-index:2;
 }
 
@@ -99,9 +83,7 @@ body{
 ========================= */
 
 .register-card{
-
     max-width:450px;
-
     margin:auto;
 
     background:rgba(0,0,0,.80);
@@ -113,7 +95,7 @@ body{
     padding:40px;
 
     box-shadow:
-        0 0 25px rgba(0,0,0,.4);
+    0 0 25px rgba(0,0,0,.4);
 }
 
 /* =========================
@@ -121,28 +103,18 @@ body{
 ========================= */
 
 .logo{
-
     text-align:center;
-
     color:#ff4655;
-
     font-size:32px;
-
     font-weight:800;
-
     margin-bottom:10px;
 }
 
 .logo span{
-
     display:block;
-
-    color:white;
-
+    color:#fff;
     font-size:14px;
-
     letter-spacing:4px;
-
     margin-top:5px;
 }
 
@@ -151,11 +123,8 @@ body{
 ========================= */
 
 .register-card h2{
-
     text-align:center;
-
-    color:white;
-
+    color:#fff;
     margin:20px 0 25px;
 }
 
@@ -164,24 +133,19 @@ body{
 ========================= */
 
 .google-btn{
-
     width:100%;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:10px;
 
     padding:14px;
 
     border:none;
-
     border-radius:10px;
 
-    background:white;
+    background:#fff;
 
     cursor:pointer;
 
@@ -191,14 +155,13 @@ body{
 }
 
 .google-btn:hover{
-
     background:#f3f3f3;
-
     transform:translateY(-2px);
 }
 
 .google-btn img{
     width:22px;
+    height:22px;
 }
 
 /* =========================
@@ -206,29 +169,19 @@ body{
 ========================= */
 
 .divider{
-
     text-align:center;
-
-    color:white;
-
+    color:#fff;
     margin:25px 0;
-
     position:relative;
 }
 
 .divider::before,
 .divider::after{
-
     content:"";
-
     position:absolute;
-
     width:40%;
-
     height:1px;
-
     background:#555;
-
     top:50%;
 }
 
@@ -241,11 +194,10 @@ body{
 }
 
 /* =========================
-   FORM INPUTS
+   INPUT FIELDS
 ========================= */
 
 form input{
-
     width:100%;
 
     padding:14px 16px;
@@ -253,7 +205,6 @@ form input{
     margin-bottom:15px;
 
     border:none;
-
     outline:none;
 
     border-radius:10px;
@@ -264,8 +215,39 @@ form input{
 }
 
 form input:focus{
-
     border:2px solid #ff4655;
+}
+
+/* =========================
+   PASSWORD FIELD
+========================= */
+
+.password-box{
+    position:relative;
+}
+
+.password-box input{
+    width:100%;
+    padding:14px 50px 14px 16px;
+}
+
+.password-box i{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-65%);
+
+    cursor:pointer;
+
+    color:#666;
+
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.password-box i:hover{
+    color:#ff4655;
 }
 
 /* =========================
@@ -273,21 +255,18 @@ form input:focus{
 ========================= */
 
 .register-btn{
-
     width:100%;
 
     padding:14px;
 
     border:none;
-
     border-radius:10px;
 
     background:#ff4655;
 
-    color:white;
+    color:#fff;
 
     font-size:16px;
-
     font-weight:600;
 
     cursor:pointer;
@@ -296,9 +275,7 @@ form input:focus{
 }
 
 .register-btn:hover{
-
     background:#ff3045;
-
     transform:translateY(-2px);
 }
 
@@ -307,20 +284,14 @@ form input:focus{
 ========================= */
 
 .login-link{
-
     text-align:center;
-
     margin-top:20px;
-
-    color:white;
+    color:#fff;
 }
 
 .login-link a{
-
     color:#ff4655;
-
     text-decoration:none;
-
     font-weight:600;
 }
 
@@ -329,13 +300,12 @@ form input:focus{
 }
 
 /* =========================
-   MOBILE
+   TABLET
 ========================= */
 
 @media(max-width:768px){
 
     .back-home{
-
         top:15px;
         left:15px;
 
@@ -345,22 +315,22 @@ form input:focus{
     }
 
     .register-card{
-
         max-width:100%;
-
         padding:30px 25px;
     }
 
     .logo{
-
         font-size:28px;
     }
 
     .register-card h2{
-
         font-size:24px;
     }
 }
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:480px){
 
@@ -369,36 +339,42 @@ form input:focus{
     }
 
     .register-card{
-
         padding:25px 20px;
     }
 
     .logo{
-
         font-size:24px;
     }
 
     .logo span{
-
         font-size:12px;
     }
 
     .register-card h2{
-
         font-size:22px;
     }
 
     form input,
     .register-btn,
     .google-btn{
-
         padding:12px;
     }
 
     .back-home{
+        top:10px;
+        left:10px;
 
         padding:8px 14px;
 
         font-size:12px;
+    }
+
+    .password-box input{
+        padding-right:45px;
+    }
+
+    .password-box i{
+        font-size:16px;
+        right:12px;
     }
 }

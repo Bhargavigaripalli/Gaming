@@ -1,4 +1,37 @@
- const registerForm =
+ // ===========================
+// SHOW / HIDE PASSWORD
+// ===========================
+
+const togglePassword =
+document.getElementById("togglePassword");
+
+const passwordInput =
+document.getElementById("password");
+
+if (togglePassword) {
+
+    togglePassword.addEventListener("click", () => {
+
+        const type =
+        passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+
+        passwordInput.setAttribute("type", type);
+
+        togglePassword.classList.toggle("fa-eye");
+        togglePassword.classList.toggle("fa-eye-slash");
+
+    });
+
+}
+
+
+// ===========================
+// REGISTER FORM VALIDATION
+// ===========================
+
+const registerForm =
 document.getElementById("registerForm");
 
 registerForm.addEventListener("submit", (e) => {
@@ -6,22 +39,25 @@ registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const fullname =
-    document.getElementById("fullname").value.trim();
+    document.getElementById("fullname")
+    .value.trim();
 
     const email =
-    document.getElementById("email").value.trim();
+    document.getElementById("email")
+    .value.trim();
 
     const password =
-    document.getElementById("password").value;
+    document.getElementById("password")
+    .value;
 
-    // NAME VALIDATION
+    // FULL NAME VALIDATION
 
-    const nameRegex = /^[A-Za-z ]+$/;
+    const nameRegex =
+    /^[A-Za-z ]+$/;
 
     if (fullname === "") {
 
         alert("Please enter your full name");
-
         return;
     }
 
@@ -48,6 +84,12 @@ registerForm.addEventListener("submit", (e) => {
     const emailRegex =
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    if (email === "") {
+
+        alert("Please enter your email address");
+        return;
+    }
+
     if (!emailRegex.test(email)) {
 
         alert(
@@ -61,6 +103,12 @@ registerForm.addEventListener("submit", (e) => {
 
     const passwordRegex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+    if (password === "") {
+
+        alert("Please enter a password");
+        return;
+    }
 
     if (!passwordRegex.test(password)) {
 
@@ -83,7 +131,9 @@ registerForm.addEventListener("submit", (e) => {
 });
 
 
+// ===========================
 // GOOGLE BUTTON
+// ===========================
 
 const googleBtn =
 document.getElementById("googleBtn");
